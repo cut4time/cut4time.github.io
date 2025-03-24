@@ -3,60 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Minimalist Website</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>GH Films</title>
+    
+    <!-- Sakura CSS - Dark Theme as Base -->
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css" type="text/css">
+    
+    <!-- Custom Film-Inspired Styling -->
     <style>
+        :root {
+            /* Film-inspired color palette */
+            --accent-color: #FF5E5B;       /* Cinematic red */
+            --secondary-color: #4ECDC4;    /* Teal for contrast */
+            --dark-bg: #121212;            /* Deep black for true cinematic feel */
+            --light-text: #F7FFF7;         /* Off-white for better readability */
+            --highlight: #FFD166;          /* Gold accent for important elements */
+        }
+        
         body {
-            font-family: 'Inter', 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 2rem;
-            font-weight: 300;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
         }
+        
+        h1, h2, h3 {
+            color: var(--light-text);
+        }
+        
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            letter-spacing: -0.5px;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            color: var(--light-text);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
         }
-        p {
-            margin-bottom: 1.5rem;
-        }
+        
         a {
-            color: #0366d6;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--highlight);
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .header {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1rem;
-        }
-        .footer {
-            margin-top: 2rem;
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
+        
+        header nav a {
+            margin-right: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-size: 0.9rem;
-            color: #777;
+        }
+        
+        header nav {
+            margin: 1.5rem 0;
+        }
+        
+        main h2 {
+            color: var(--accent-color);
+            font-size: 2rem;
+        }
+        
+        ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>GH Films</h1>
         <nav>
-            <a href="#">Home</a> | 
-            <a href="#">About</a> | 
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>
-    </div>
+    </header>
 
     <main>
         <h2>You took a wrong turn.</h2>
@@ -70,8 +106,8 @@
         </ul>
     </main>
 
-    <div class="footer">
-        <p>&copy; 2025 cut4time. Hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-    </div>
+    <footer>
+        <p>&copy; 2025 GH Films. Hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    </footer>
 </body>
 </html>
